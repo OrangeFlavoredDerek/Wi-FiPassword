@@ -14,6 +14,21 @@
 		AD293E6F278430D800508A90 /* Wi_FiPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E6E278430D800508A90 /* Wi_FiPasswordTests.swift */; };
 		AD293E79278430D800508A90 /* Wi_FiPasswordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E78278430D800508A90 /* Wi_FiPasswordUITests.swift */; };
 		AD293E7B278430D800508A90 /* Wi_FiPasswordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E7A278430D800508A90 /* Wi_FiPasswordUITestsLaunchTests.swift */; };
+		AD293E8A27846CBB00508A90 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E8927846CBB00508A90 /* AppError.swift */; };
+		AD293E8B27846CBB00508A90 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E8927846CBB00508A90 /* AppError.swift */; };
+		AD293E8C27846CBB00508A90 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E8927846CBB00508A90 /* AppError.swift */; };
+		AD293E8E27846ECC00508A90 /* WiFiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E8D27846ECB00508A90 /* WiFiHelper.swift */; };
+		AD293E8F27846ECC00508A90 /* WiFiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E8D27846ECB00508A90 /* WiFiHelper.swift */; };
+		AD293E9027846ECC00508A90 /* WiFiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E8D27846ECB00508A90 /* WiFiHelper.swift */; };
+		AD293E9227846F4000508A90 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9127846F4000508A90 /* QRCode.swift */; };
+		AD293E9327846F4000508A90 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9127846F4000508A90 /* QRCode.swift */; };
+		AD293E9427846F4000508A90 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9127846F4000508A90 /* QRCode.swift */; };
+		AD293E962784713800508A90 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E952784713800508A90 /* Functions.swift */; };
+		AD293E972784713800508A90 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E952784713800508A90 /* Functions.swift */; };
+		AD293E982784713800508A90 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E952784713800508A90 /* Functions.swift */; };
+		AD293E9B278478C100508A90 /* WiFiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9A278478C100508A90 /* WiFiInfoView.swift */; };
+		AD293E9C278478C100508A90 /* WiFiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9A278478C100508A90 /* WiFiInfoView.swift */; };
+		AD293E9D278478C100508A90 /* WiFiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9A278478C100508A90 /* WiFiInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +60,12 @@
 		AD293E74278430D800508A90 /* Wi-FiPasswordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wi-FiPasswordUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD293E78278430D800508A90 /* Wi_FiPasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wi_FiPasswordUITests.swift; sourceTree = "<group>"; };
 		AD293E7A278430D800508A90 /* Wi_FiPasswordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wi_FiPasswordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AD293E87278469ED00508A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AD293E8927846CBB00508A90 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		AD293E8D27846ECB00508A90 /* WiFiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiHelper.swift; sourceTree = "<group>"; };
+		AD293E9127846F4000508A90 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		AD293E952784713800508A90 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		AD293E9A278478C100508A90 /* WiFiInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +116,11 @@
 		AD293E5B278430D500508A90 /* Wi-FiPassword */ = {
 			isa = PBXGroup;
 			children = (
+				AD293E87278469ED00508A90 /* Info.plist */,
+				AD293E8827846C9D00508A90 /* Tools */,
 				AD293E5C278430D500508A90 /* Wi_FiPasswordApp.swift */,
-				AD293E5E278430D600508A90 /* ContentView.swift */,
+				AD293E99278478A300508A90 /* View */,
+				AD293E952784713800508A90 /* Functions.swift */,
 				AD293E60278430D700508A90 /* Assets.xcassets */,
 				AD293E65278430D700508A90 /* Wi_FiPassword.entitlements */,
 				AD293E62278430D700508A90 /* Preview Content */,
@@ -127,6 +151,25 @@
 				AD293E7A278430D800508A90 /* Wi_FiPasswordUITestsLaunchTests.swift */,
 			);
 			path = "Wi-FiPasswordUITests";
+			sourceTree = "<group>";
+		};
+		AD293E8827846C9D00508A90 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				AD293E8927846CBB00508A90 /* AppError.swift */,
+				AD293E8D27846ECB00508A90 /* WiFiHelper.swift */,
+				AD293E9127846F4000508A90 /* QRCode.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		AD293E99278478A300508A90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD293E5E278430D600508A90 /* ContentView.swift */,
+				AD293E9A278478C100508A90 /* WiFiInfoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD293E5F278430D600508A90 /* ContentView.swift in Sources */,
+				AD293E9B278478C100508A90 /* WiFiInfoView.swift in Sources */,
 				AD293E5D278430D600508A90 /* Wi_FiPasswordApp.swift in Sources */,
+				AD293E8E27846ECC00508A90 /* WiFiHelper.swift in Sources */,
+				AD293E8A27846CBB00508A90 /* AppError.swift in Sources */,
+				AD293E9227846F4000508A90 /* QRCode.swift in Sources */,
+				AD293E962784713800508A90 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD293E8B27846CBB00508A90 /* AppError.swift in Sources */,
+				AD293E9327846F4000508A90 /* QRCode.swift in Sources */,
 				AD293E6F278430D800508A90 /* Wi_FiPasswordTests.swift in Sources */,
+				AD293E972784713800508A90 /* Functions.swift in Sources */,
+				AD293E8F27846ECC00508A90 /* WiFiHelper.swift in Sources */,
+				AD293E9C278478C100508A90 /* WiFiInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +330,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD293E7B278430D800508A90 /* Wi_FiPasswordUITestsLaunchTests.swift in Sources */,
+				AD293E9D278478C100508A90 /* WiFiInfoView.swift in Sources */,
 				AD293E79278430D800508A90 /* Wi_FiPasswordUITests.swift in Sources */,
+				AD293E9027846ECC00508A90 /* WiFiHelper.swift in Sources */,
+				AD293E8C27846CBB00508A90 /* AppError.swift in Sources */,
+				AD293E9427846F4000508A90 /* QRCode.swift in Sources */,
+				AD293E982784713800508A90 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +484,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wi-FiPassword/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +512,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wi-FiPassword/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
