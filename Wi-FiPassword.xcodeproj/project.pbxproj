@@ -29,6 +29,15 @@
 		AD293E9B278478C100508A90 /* WiFiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9A278478C100508A90 /* WiFiInfoView.swift */; };
 		AD293E9C278478C100508A90 /* WiFiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9A278478C100508A90 /* WiFiInfoView.swift */; };
 		AD293E9D278478C100508A90 /* WiFiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9A278478C100508A90 /* WiFiInfoView.swift */; };
+		AD293E9F2785835C00508A90 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9E2785835C00508A90 /* SizePreferenceKey.swift */; };
+		AD293EA02785835C00508A90 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9E2785835C00508A90 /* SizePreferenceKey.swift */; };
+		AD293EA12785835C00508A90 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293E9E2785835C00508A90 /* SizePreferenceKey.swift */; };
+		AD293EA42785854600508A90 /* View+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293EA32785854600508A90 /* View+Snapshot.swift */; };
+		AD293EA52785854600508A90 /* View+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293EA32785854600508A90 /* View+Snapshot.swift */; };
+		AD293EA62785854600508A90 /* View+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293EA32785854600508A90 /* View+Snapshot.swift */; };
+		AD293EA82785879800508A90 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293EA72785879800508A90 /* NSImage+Extension.swift */; };
+		AD293EA92785879800508A90 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293EA72785879800508A90 /* NSImage+Extension.swift */; };
+		AD293EAA2785879800508A90 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD293EA72785879800508A90 /* NSImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +75,9 @@
 		AD293E9127846F4000508A90 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		AD293E952784713800508A90 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		AD293E9A278478C100508A90 /* WiFiInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiInfoView.swift; sourceTree = "<group>"; };
+		AD293E9E2785835C00508A90 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
+		AD293EA32785854600508A90 /* View+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Snapshot.swift"; sourceTree = "<group>"; };
+		AD293EA72785879800508A90 /* NSImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +129,12 @@
 			isa = PBXGroup;
 			children = (
 				AD293E87278469ED00508A90 /* Info.plist */,
+				AD293EA22785851E00508A90 /* Extension */,
 				AD293E8827846C9D00508A90 /* Tools */,
 				AD293E5C278430D500508A90 /* Wi_FiPasswordApp.swift */,
 				AD293E99278478A300508A90 /* View */,
 				AD293E952784713800508A90 /* Functions.swift */,
+				AD293E9E2785835C00508A90 /* SizePreferenceKey.swift */,
 				AD293E60278430D700508A90 /* Assets.xcassets */,
 				AD293E65278430D700508A90 /* Wi_FiPassword.entitlements */,
 				AD293E62278430D700508A90 /* Preview Content */,
@@ -170,6 +184,15 @@
 				AD293E9A278478C100508A90 /* WiFiInfoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AD293EA22785851E00508A90 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AD293EA32785854600508A90 /* View+Snapshot.swift */,
+				AD293EA72785879800508A90 /* NSImage+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,10 +326,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD293E5F278430D600508A90 /* ContentView.swift in Sources */,
+				AD293EA42785854600508A90 /* View+Snapshot.swift in Sources */,
+				AD293EA82785879800508A90 /* NSImage+Extension.swift in Sources */,
 				AD293E9B278478C100508A90 /* WiFiInfoView.swift in Sources */,
 				AD293E5D278430D600508A90 /* Wi_FiPasswordApp.swift in Sources */,
 				AD293E8E27846ECC00508A90 /* WiFiHelper.swift in Sources */,
 				AD293E8A27846CBB00508A90 /* AppError.swift in Sources */,
+				AD293E9F2785835C00508A90 /* SizePreferenceKey.swift in Sources */,
 				AD293E9227846F4000508A90 /* QRCode.swift in Sources */,
 				AD293E962784713800508A90 /* Functions.swift in Sources */,
 			);
@@ -316,9 +342,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD293EA02785835C00508A90 /* SizePreferenceKey.swift in Sources */,
 				AD293E8B27846CBB00508A90 /* AppError.swift in Sources */,
+				AD293EA92785879800508A90 /* NSImage+Extension.swift in Sources */,
 				AD293E9327846F4000508A90 /* QRCode.swift in Sources */,
 				AD293E6F278430D800508A90 /* Wi_FiPasswordTests.swift in Sources */,
+				AD293EA52785854600508A90 /* View+Snapshot.swift in Sources */,
 				AD293E972784713800508A90 /* Functions.swift in Sources */,
 				AD293E8F27846ECC00508A90 /* WiFiHelper.swift in Sources */,
 				AD293E9C278478C100508A90 /* WiFiInfoView.swift in Sources */,
@@ -330,10 +359,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD293E7B278430D800508A90 /* Wi_FiPasswordUITestsLaunchTests.swift in Sources */,
+				AD293EA62785854600508A90 /* View+Snapshot.swift in Sources */,
+				AD293EAA2785879800508A90 /* NSImage+Extension.swift in Sources */,
 				AD293E9D278478C100508A90 /* WiFiInfoView.swift in Sources */,
 				AD293E79278430D800508A90 /* Wi_FiPasswordUITests.swift in Sources */,
 				AD293E9027846ECC00508A90 /* WiFiHelper.swift in Sources */,
 				AD293E8C27846CBB00508A90 /* AppError.swift in Sources */,
+				AD293EA12785835C00508A90 /* SizePreferenceKey.swift in Sources */,
 				AD293E9427846F4000508A90 /* QRCode.swift in Sources */,
 				AD293E982784713800508A90 /* Functions.swift in Sources */,
 			);

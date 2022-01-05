@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import AppKit
+import SwiftUI
 
 //MARK: 获取Wi-Fi密码
 func getWiFiPassword(errorMsg: inout String?) -> (String, String)? {
@@ -28,4 +30,31 @@ func getWiFiPassword(errorMsg: inout String?) -> (String, String)? {
 
 
 //MARK: 保存图片
-
+// https://stackoverflow.com/questions/39925248/swift-on-macos-how-to-save-nsimage-to-disk
+func saveNSImage(_ nsImage: NSImage) {
+    let panel = NSSavePanel()
+    panel.title = "保存 WiFi 信息"
+    panel.message = "将 WiFi 信息进行保存，便于下次使用"
+    panel.allowedFileTypes = ["png", "jpg", "bmp"]
+    panel.nameFieldStringValue = "WiFi-Password.png"
+    panel.nameFieldLabel = "图片名称（Image Name）"
+    panel.begin { (response) in
+        switch response {
+        case .OK:
+            guard let file = panel.url?.path else {
+                return
+            }
+            let destinationURL = URL(fileURLWithPath: file)
+            do {
+                try nsImage.pngWrite(to: destinationURL, options: .withoutOverwriting)
+            } catch {
+                debugPrint(error.localizedDescription)
+            }
+            
+        case .cancel:
+            debugPrint("cancel")
+        default:
+            break
+        }
+    }
+}

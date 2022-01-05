@@ -11,25 +11,65 @@ struct ContentView: View {
     @State private var errorMsg: String?
     @State private var wifiName: String?
     @State private var password: String?
+    @State var infoViewSize: CGSize = CGSize(width: 500, height: 380)
     
     var body: some View {
         ZStack {
-            Button {
-                guard let result = getWiFiPassword(errorMsg: &errorMsg) else {
-                    return
+            HStack {
+                Button {
+                    guard let result = getWiFiPassword(errorMsg: &errorMsg) else {
+                        return
+                    }
+                    wifiName = result.0 //ssid
+                    password = result.1 //password
+                } label: {
+                    Text("获取Wi-Fi信息")
+                        .padding()
+                        .frame(width: 175, height: 100, alignment: .center)
+                        .cornerRadius(16)
+                        .shadow(radius: 8)
                 }
-                wifiName = result.0 //ssid
-                password = result.1 //password
-            } label: {
-                Text("获取Wi-Fi信息")
-                    .padding()
-                    .frame(width: 175, height: 100, alignment: .center)
-                    .cornerRadius(16)
-                    .shadow(radius: 8)
+                .buttonStyle(.borderedProminent)
+                .padding(50)
+                
+                if wifiName != nil && password != nil {
+                    Button {
+                        guard let wifiName = wifiName, let password = password else {
+                            return
+                        }
+                        guard let nsImage = WiFiInfoView(wifiName: wifiName, password: password)
+                                .snapshot(size: infoViewSize) else {
+                                    return
+                                }
+                        saveNSImage(nsImage)
+                    } label: {
+                        Text("保存为图片")
+                            .padding()
+                            .frame(width: 175, height: 100, alignment: .center)
+                            .cornerRadius(16)
+                            .shadow(radius: 8)
+                    }
+                    .padding(50)
+                }
             }
-            .padding(50)
+            
+            if let errorMsg = errorMsg {
+                Text(errorMsg)
+                    .foregroundColor(Color.red)
+            }
+            
+            if let wifiName = wifiName, let password = password {
+                GeometryReader { geometry in
+                    WiFiInfoView(wifiName: wifiName, password: password)
+                        .preference(key: SizePreferenceKey.self,
+                                    value: geometry.size)
+                }
+            }
         }
         .frame(minWidth: 300, maxWidth: .infinity, minHeight: 100, maxHeight: .infinity, alignment: .center)
+        .onPreferenceChange(SizePreferenceKey.self) { preferences in
+            self.infoViewSize = preferences
+        }
     }
 }
 
