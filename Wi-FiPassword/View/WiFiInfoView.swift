@@ -14,11 +14,11 @@ struct WiFiInfoView: View {
     
     var body: some View {
         VStack {
-            Text("WiFi Login")
-                .padding()
-                .font(.largeTitle)
-                .frame(maxWidth: .infinity, alignment: .center)
-            
+//            Text("WiFi Login")
+//                .padding()
+//                .font(.largeTitle)
+//                .frame(maxWidth: .infinity, alignment: .center)
+//            
             HStack {
                 Spacer(minLength: 70)
                 if let image = QRCode(WiFiHelper.getQRCodeText(ssid: wifiName, password: password))?.image {

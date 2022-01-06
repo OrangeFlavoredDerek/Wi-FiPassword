@@ -13,5 +13,6 @@ struct Wi_FiPasswordApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.automatic)
     }
 }

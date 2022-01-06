@@ -14,8 +14,8 @@ struct ContentView: View {
     @State var infoViewSize: CGSize = CGSize(width: 500, height: 380)
     
     var body: some View {
-        ZStack {
-            HStack {
+        VStack {
+            HStack(alignment: .top, spacing: 20) {
                 Button {
                     guard let result = getWiFiPassword(errorMsg: &errorMsg) else {
                         return
@@ -25,7 +25,7 @@ struct ContentView: View {
                 } label: {
                     Text("获取Wi-Fi信息")
                         .padding()
-                        .frame(width: 175, height: 100, alignment: .center)
+                        //.frame(width: 175, height: 100, alignment: .center)
                         .cornerRadius(16)
                         .shadow(radius: 8)
                 }
@@ -45,10 +45,11 @@ struct ContentView: View {
                     } label: {
                         Text("保存为图片")
                             .padding()
-                            .frame(width: 175, height: 100, alignment: .center)
+                            //.frame(width: 175, height: 100, alignment: .center)
                             .cornerRadius(16)
                             .shadow(radius: 8)
                     }
+                    .buttonStyle(.borderedProminent)
                     .padding(50)
                 }
             }
@@ -66,7 +67,7 @@ struct ContentView: View {
                 }
             }
         }
-        .frame(minWidth: 300, maxWidth: .infinity, minHeight: 100, maxHeight: .infinity, alignment: .center)
+        .frame(minWidth: 600, idealWidth: 600, minHeight: 500, idealHeight: 500, alignment: .center)
         .onPreferenceChange(SizePreferenceKey.self) { preferences in
             self.infoViewSize = preferences
         }
